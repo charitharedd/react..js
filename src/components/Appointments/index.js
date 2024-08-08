@@ -15,7 +15,7 @@ class Appointments extends Component {
     isFilterActive: false,
   }
 
-  toogleIsStarred = id => {
+  toggleIsStarred = id => {
     this.setState(prevState => ({
       appointmentsList: prevState.appointmentsList.map(eachAppointment => {
         if (id === eachAppointment.id) {
@@ -123,6 +123,7 @@ class Appointments extends Component {
                 type="button"
                 className={`filter-style ${filterClassName}`}
                 onClick={this.onFilter}
+                testid="star"
               >
                 Starred
               </button>
